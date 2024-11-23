@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    <div class="jvm">
+        <p>メモリの割当増やしたけどそれでも重い！！もっと軽くしたいいやさせろと言う人はこちらのjvm引数を使ってみてください環境によってはクラッシュの原因になったりすることが可能性としてありますので自己責任で</p>
+        <div class="jvm-win">
+            <p>筆者の環境で動いた引数</p>
+            <ul>
+                <li>win10</li>
+                <li>java23</li>
+                <li>i9-9900k</li>
+                <li>32GB</li>
+                <li>rtx2080ti</li>
+            </ul>
+            <p>-Xms4G -Xmx16G -XX:MaxNewSize=4G -XX:MetaspaceSize=4G -XX:MaxMetaspaceSize=4G -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:ParallelGCThreads=12 -XX:ConcGCThreads=12 -XX:+DisableExplicitGC</p>
+        </div>
+        <div class="jvm-mac">
+            <p>m1 macならこれで動くと思います</p>
+            <p>-Xms4G -Xmx6G -XX:MaxNewSize=2G -XX:MetaspaceSize=2G -XX:MaxMetaspaceSize=2G -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:ParallelGCThreads=8 -XX:ConcGCThreads=8 -XX:+DisableExplicitGC</p>
+        </div>
+        <p>詳しく気になる人はXXから後ろをそれぞれ調べれば出てくると思います</p>
+    </div>
+    <button><a href="index.html">top</a></button>
+</head>
